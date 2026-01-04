@@ -4,9 +4,7 @@
 
 **Now supports GPT-4o with text + audio + image input 📝🎵🖼️, audio responses 🔊**, and improved RAG with function calling 🛠️ and external API calls support 🌐
 
-Find other AI Chatbot implementations in [Python](https://github.com/wassengerhq/whatsapp-chatgpt-bot-python), [Node.js](https://github.com/wassengerhq/whatsapp-chatgpt-bot) and [PHP](https://github.com/wassengerhq/whatsapp-chatgpt-bot-php)
-
-🚀 **[Get started for free with Wassenger WhatsApp API](https://wassenger.com/register)** in minutes by connecting your existing WhatsApp number and [obtain your API key](https://app.wassenger.com/apikeys) ✨
+🚀 **[Get started for free with Wassenger WhatsApp API](https://wassenger.com/register)** in minutes by connecting your existing WhatsApp number and [obtain your API key](https://app.wassenger.com/apikeys)
 
 ## Features
 
@@ -54,7 +52,7 @@ Find other AI Chatbot implementations in [Python](https://github.com/wassengerhq
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/wassengerhq/whatsapp-chatgpt-bot-csharp.git
+   git clone https://github.com/helios1117/whatsapp-chatgpt-bot-csharp.git
    cd whatsapp-chatgpt-bot-csharp
    ```
 
@@ -561,7 +559,7 @@ Or in `appsettings.Development.json`:
 - [Wassenger Documentation](https://app.wassenger.com/docs)
 - [OpenAI API Documentation](https://platform.openai.com/docs)
 - [C# Language Reference](https://docs.microsoft.com/en-us/dotnet/csharp/)
-- [GitHub Issues](https://github.com/wassengerhq/whatsapp-chatgpt-bot-csharp/issues)
+- [GitHub Issues](https://github.com/helios1117/whatsapp-chatgpt-bot-csharp/issues)
 
 ## Contributing
 
