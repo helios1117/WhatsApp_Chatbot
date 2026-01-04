@@ -2,7 +2,7 @@
 
 # Development Setup Script for WhatsApp ChatGPT Bot C#
 
-echo "🔧 Setting up WhatsApp ChatGPT Bot C# Development Environment"
+echo "Setting up WhatsApp ChatGPT Bot C# Development Environment"
 echo "==========================================================="
 
 # Function to check if command exists
