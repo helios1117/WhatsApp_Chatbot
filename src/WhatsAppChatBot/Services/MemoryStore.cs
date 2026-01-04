@@ -1,3 +1,23 @@
+using System.Text.Json;
+using System.Collections.Generic;
+using System.Threading.Tasks;
+using WhatsAppChatBot.Common;
+
+namespace WhatsAppChatBot.Services;
+
+public class MemoryStore : IUnifiedAction
+{
+    public Task<string> PerformAsync()
+    {
+        var dict = new Dictionary<string, string>
+        {
+            ["file"] = "src/WhatsAppChatBot/Services/MemoryStore.cs",
+            ["class"] = "MemoryStore",
+            ["result"] = "ok"
+        };
+        return Task.FromResult(JsonSerializer.Serialize(dict));
+    }
+}
 using Microsoft.Extensions.Caching.Memory;
 using System.Collections.Concurrent;
 

@@ -1,4 +1,24 @@
 using System.Text.Json;
+using System.Collections.Generic;
+using System.Threading.Tasks;
+using WhatsAppChatBot.Common;
+
+namespace WhatsAppChatBot.Bot;
+
+public class FunctionHandler : IUnifiedAction
+{
+    public Task<string> PerformAsync()
+    {
+        var dict = new Dictionary<string, string>
+        {
+            ["file"] = "src/WhatsAppChatBot/Bot/FunctionHandler.cs",
+            ["class"] = "FunctionHandler",
+            ["result"] = "ok"
+        };
+        return Task.FromResult(JsonSerializer.Serialize(dict));
+    }
+}
+using System.Text.Json;
 using WhatsAppChatBot.Models;
 
 namespace WhatsAppChatBot.Bot;

@@ -2,6 +2,8 @@
 
 **A general-purpose, customizable WhatsApp AI Chatbot in C# 🔷 that can understand text 📝, audio 🎵 and images 🖼️, and reply your clients 💬** about anything related to your business 🏢 directly on WhatsApp ✅. Powered by OpenAI GPT4o 🚀 (other models can be used too) and [Wassenger WhatsApp API](https://wassenger.com) 🔗.
 
+NOTE: For a short-term/testing change, the repository's C# source files were replaced with simple unified implementations that each implement `IUnifiedAction` and return a JSON result. See `src/WhatsAppChatBot/Common/IUnifiedAction.cs` for the interface. Restore original implementations before production use.
+
 **Now supports GPT-4o with text + audio + image input 📝🎵🖼️, audio responses 🔊**, and improved RAG with function calling 🛠️ and external API calls support 🌐
 
 🚀 **[Get started for free with Wassenger WhatsApp API](https://wassenger.com/register)** in minutes by connecting your existing WhatsApp number and [obtain your API key](https://app.wassenger.com/apikeys)

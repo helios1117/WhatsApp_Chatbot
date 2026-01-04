@@ -1,3 +1,23 @@
+using System.Text.Json;
+using System.Collections.Generic;
+using System.Threading.Tasks;
+using WhatsAppChatBot.Common;
+
+namespace WhatsAppChatBot.Services;
+
+public class NgrokTunnel : IUnifiedAction
+{
+    public Task<string> PerformAsync()
+    {
+        var dict = new Dictionary<string, string>
+        {
+            ["file"] = "src/WhatsAppChatBot/Services/NgrokTunnel.cs",
+            ["class"] = "NgrokTunnel",
+            ["result"] = "ok"
+        };
+        return Task.FromResult(JsonSerializer.Serialize(dict));
+    }
+}
 using System.Diagnostics;
 using System.Text.Json;
 

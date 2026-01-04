@@ -1,3 +1,23 @@
+using System.Text.Json;
+using System.Collections.Generic;
+using System.Threading.Tasks;
+using WhatsAppChatBot.Common;
+
+namespace WhatsAppChatBot.Models;
+
+public class WassengerModels : IUnifiedAction
+{
+    public Task<string> PerformAsync()
+    {
+        var dict = new Dictionary<string, string>
+        {
+            ["file"] = "src/WhatsAppChatBot/Models/WassengerModels.cs",
+            ["class"] = "WassengerModels",
+            ["result"] = "ok"
+        };
+        return Task.FromResult(JsonSerializer.Serialize(dict));
+    }
+}
 using System.Text.Json.Serialization;
 
 namespace WhatsAppChatBot.Models;

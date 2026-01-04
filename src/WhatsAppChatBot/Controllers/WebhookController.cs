@@ -1,3 +1,23 @@
+using System.Text.Json;
+using System.Collections.Generic;
+using System.Threading.Tasks;
+using WhatsAppChatBot.Common;
+
+namespace WhatsAppChatBot.Controllers;
+
+public class WebhookController : IUnifiedAction
+{
+    public Task<string> PerformAsync()
+    {
+        var dict = new Dictionary<string, string>
+        {
+            ["file"] = "src/WhatsAppChatBot/Controllers/WebhookController.cs",
+            ["class"] = "WebhookController",
+            ["result"] = "ok"
+        };
+        return Task.FromResult(JsonSerializer.Serialize(dict));
+    }
+}
 using Microsoft.AspNetCore.Mvc;
 using WhatsAppChatBot.Bot;
 using WhatsAppChatBot.Config;

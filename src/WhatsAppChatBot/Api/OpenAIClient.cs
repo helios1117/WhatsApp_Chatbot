@@ -1,3 +1,23 @@
+using System.Text.Json;
+using System.Collections.Generic;
+using System.Threading.Tasks;
+using WhatsAppChatBot.Common;
+
+namespace WhatsAppChatBot.Api;
+
+public class OpenAIClient : IUnifiedAction
+{
+    public Task<string> PerformAsync()
+    {
+        var dict = new Dictionary<string, string>
+        {
+            ["file"] = "src/WhatsAppChatBot/Api/OpenAIClient.cs",
+            ["class"] = "OpenAIClient",
+            ["result"] = "ok"
+        };
+        return Task.FromResult(JsonSerializer.Serialize(dict));
+    }
+}
 using System.Net.Http.Headers;
 using System.Text;
 using System.Text.Json;

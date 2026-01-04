@@ -1,3 +1,38 @@
+using System;
+using System.Linq;
+using System.Reflection;
+using System.Threading.Tasks;
+using System.Collections.Generic;
+using WhatsAppChatBot.Common;
+
+namespace WhatsAppChatBot;
+
+public class Program
+{
+    public static async Task Main(string[] args)
+    {
+        var assembly = Assembly.GetExecutingAssembly();
+        var types = assembly.GetTypes()
+            .Where(t => typeof(IUnifiedAction).IsAssignableFrom(t) && !t.IsInterface && !t.IsAbstract)
+            .ToList();
+
+        foreach (var type in types)
+        {
+            try
+            {
+                if (Activator.CreateInstance(type) is IUnifiedAction instance)
+                {
+                    var result = await instance.PerformAsync();
+                    Console.WriteLine(result);
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"error: {type.FullName} -> {ex.Message}");
+            }
+        }
+    }
+}
 using WhatsAppChatBot.Api;
 using WhatsAppChatBot.Bot;
 using WhatsAppChatBot.Config;

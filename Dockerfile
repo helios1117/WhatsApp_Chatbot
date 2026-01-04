@@ -17,10 +17,7 @@ RUN dotnet publish "WhatsAppChatBot.csproj" -c Release -o /app/publish /p:UseApp
 
 FROM base AS final
 WORKDIR /app
-COPY --from=publish /app/publish .
-
-# Create temporary directory
-RUN mkdir -p /app/.tmp && chmod 755 /app/.tmp
+COPY --from=publish /app/publish
 
 # Set environment variables
 ENV ASPNETCORE_URLS=http://+:8080

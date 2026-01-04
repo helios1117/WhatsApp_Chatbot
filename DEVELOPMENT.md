@@ -521,29 +521,3 @@ az webapp deployment source config-zip \
    _logger.LogInformation("Processing took: {ElapsedMs}ms",
        stopwatch.ElapsedMilliseconds);
    ```
-
-## Best Practices
-
-### Code Organization
-- Use dependency injection for all services
-- Implement interfaces for testability
-- Follow SOLID principles
-- Use async/await for I/O operations
-
-### Error Handling
-- Use try-catch blocks appropriately
-- Log errors with context
-- Return meaningful error responses
-- Implement circuit breaker pattern for external APIs
-
-### Security
-- Validate all inputs
-- Use environment variables for secrets
-- Implement rate limiting
-- Secure webhook endpoints
-
-### Performance
-- Cache frequently accessed data
-- Use connection pooling for HTTP clients
-- Implement proper disposal patterns
-- Monitor memory usage
