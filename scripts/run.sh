@@ -2,7 +2,7 @@
 
 # WhatsApp ChatGPT Bot - C# Launch Script
 
-echo "🚀 WhatsApp ChatGPT Bot - C# Edition"
+echo "WhatsApp ChatGPT Bot - C# Edition"
 echo "======================================"
 
 # Check if .NET is installed
